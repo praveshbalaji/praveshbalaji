@@ -17,20 +17,16 @@
 </head>
 <body>
     
-  <video id="bg-video" controls="controls" preload="auto" muted playsinline loop data-object-fit="cover">
+  <video id="bg-video" muted playsinline loop data-object-fit="cover">
     <source src="video/gfp-astro-timelapse.webm" type="video/webm">
 </video>
 
-<button id="play-button">Play Video</button>
-
 <script>
     const video = document.getElementById("bg-video");
-    const playButton = document.getElementById("play-button");
 
-    // Add a click event listener to the play button
-    playButton.addEventListener("click", function () {
+    // Simulate a user click event to start the video
+    document.addEventListener("DOMContentLoaded", function () {
         video.play();
-        playButton.style.display = "none"; // Hide the play button after video starts playing
     });
 
     // Add an ended event listener to loop the video
@@ -81,7 +77,7 @@
                   
                   <div class="intro-right col-md-4">
                   <h2 class="mb-4 ">A Warm Welcome</h2>
-                  <p class="mb-4 subpara">Hi! I am PraveshBalaji.Computer Architect</p>
+                  <p class="mb-4 subpara">Hi! I am BALAJI MANOKARAN Software Architect</p>
                   <img src="img/me.jpg" alt="Image" class="img-fluid intro-img-1">
                 </div>
                   
