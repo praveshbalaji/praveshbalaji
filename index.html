@@ -17,9 +17,28 @@
 </head>
 <body>
     
-    <video id="bg-video" controls="controls"  controls preload="auto" autoplay="autoplay" controls autoplay muted playsinline loop data-object-fit="cover">
-        <source src="video/gfp-astro-timelapse.webm" type="video/webm" >
-  </video>
+  <video id="bg-video" controls="controls" preload="auto" muted playsinline loop data-object-fit="cover">
+    <source src="video/gfp-astro-timelapse.webm" type="video/webm">
+</video>
+
+<button id="play-button">Play Video</button>
+
+<script>
+    const video = document.getElementById("bg-video");
+    const playButton = document.getElementById("play-button");
+
+    // Add a click event listener to the play button
+    playButton.addEventListener("click", function () {
+        video.play();
+        playButton.style.display = "none"; // Hide the play button after video starts playing
+    });
+
+    // Add an ended event listener to loop the video
+    video.addEventListener("ended", function () {
+        this.currentTime = 0;
+        this.play();
+    });
+</script>
     
     <div class="page-container">
       <div class="container-fluid">
