@@ -777,17 +777,10 @@ $(document).ready(function () {
         message: message
       },
      dataType: "json", // ⚡ tells jQuery to expect JSON
-  success: function(res) {
-    alert("Data saved to Google Sheet!");
-    $("#name").val("");
-    $("#email").val("");
-    $("#message").val("");
-       location.reload();
-  },
-  error: function(err) {
-    console.error(err);
-    alert("Something went wrong. Check console.");
-  }
+  success: function () {
+      alert("Data saved to Google Sheet!");
+      location.reload();
+    }
     });
   });
 });
@@ -849,6 +842,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
