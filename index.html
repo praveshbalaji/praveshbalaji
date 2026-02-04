@@ -756,39 +756,40 @@ font-weight: 500;
 <script>
 $(document).ready(function () {
   $("#sendEmail").click(function (e) {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
 
     var fullName = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
 
-    if (fullName === "" || email === "" || message === "") {
+    if (!fullName || !email || !message) {
       alert("Please fill all fields");
       return;
     }
 
     $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbyMsMfnvcNWfyd1JpIi94Q4aou-6FL-_0t9adnpxotxXsZ32FyLgWcRz3M4yUBD34JQ/exec",
+       url: "https://script.google.com/macros/s/AKfycbxR0gYxcl6vJUs5yyPrTWcb_c2vYTZBSiz1-RhnmCFk_63EdEho_hENItchXQM0f3Ov/exec",
       method: "POST",
       data: {
-    fullName: $("#name").val(),
-    email: $("#email").val(),
-          Phone:"",
-    message: $("#message").val()
-  },
-      success: function (response) {
+        fullName: fullName,
+        email: email,
+        Phone: "",
+        message: message
+      },
+      success: function(response) {
         alert("Data saved to Google Sheet!");
         $("#name").val("");
         $("#email").val("");
         $("#message").val("");
       },
-      error: function (error) {
-        console.error(error);
-        alert("Something went wrong. Check console for details.");
+      error: function(err) {
+        console.error(err);
+        alert("Something went wrong.");
       }
     });
   });
 });
+
 </script>
 
 
@@ -846,6 +847,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
