@@ -777,7 +777,7 @@ $(document).ready(function () {
         message: message
       },
      dataType: "json", // ⚡ tells jQuery to expect JSON
-  success: function () {
+  success: function (response) {
       alert("Data saved !");
       window.location.reload();
     },
@@ -846,6 +846,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
