@@ -756,13 +756,13 @@ font-weight: 500;
 <script>
 $(document).ready(function () {
   $("#sendEmail").click(function (e) {
-    e.preventDefault(); // stop page reload if button is inside form
+    e.preventDefault(); // prevent page reload
 
-    var name = $("#name").val();
+    var fullName = $("#name").val();
+    var email = $("#email").val();
     var message = $("#message").val();
-      var email = $("#email").val();
 
-    if (name === "" || message === "" || email === "") {
+    if (fullName === "" || email === "" || message === "") {
       alert("Please fill all fields");
       return;
     }
@@ -771,26 +771,24 @@ $(document).ready(function () {
       url: "https://script.google.com/macros/s/AKfycbyMsMfnvcNWfyd1JpIi94Q4aou-6FL-_0t9adnpxotxXsZ32FyLgWcRz3M4yUBD34JQ/exec",
       method: "POST",
       data: {
-        name: name,
-          email:email,
+        fullName: fullName, // must match Apps Script
+        email: email,
         message: message
       },
       success: function (response) {
         alert("Data saved to Google Sheet!");
         $("#name").val("");
-
-           $("email").val("");
+        $("#email").val("");
         $("#message").val("");
       },
       error: function (error) {
         console.error(error);
-        alert(error);
+        alert("Something went wrong. Check console for details.");
       }
     });
   });
 });
 </script>
-
 
 
                   </form>
@@ -847,6 +845,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
