@@ -776,16 +776,18 @@ $(document).ready(function () {
         Phone: "",
         message: message
       },
-      success: function(response) {
-        alert("Data saved to Google Sheet!");
-        $("#name").val("");
-        $("#email").val("");
-        $("#message").val("");
-      },
-      error: function(err) {
-        console.error(err);
-        alert("Something went wrong.");
-      }
+     dataType: "json", // ⚡ tells jQuery to expect JSON
+  success: function(res) {
+    alert("Data saved to Google Sheet!");
+    $("#name").val("");
+    $("#email").val("");
+    $("#message").val("");
+       location.reload();
+  },
+  error: function(err) {
+    console.error(err);
+    alert("Something went wrong. Check console.");
+  }
     });
   });
 });
@@ -847,6 +849,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
