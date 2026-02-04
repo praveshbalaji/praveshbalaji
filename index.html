@@ -760,22 +760,26 @@ $(document).ready(function () {
 
     var name = $("#name").val();
     var message = $("#message").val();
+      var email = $("email").val();
 
-    if (name === "" || message === "") {
+    if (name === "" || message === "" || email === "") {
       alert("Please fill all fields");
       return;
     }
 
     $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbxhFv3b9bsuNJxS2PSRpSjLriXcD-McAtzM7CjHRCub1Ti3II7fR-13BC2DcdZDv4un/exec",
+      url: "https://script.google.com/macros/s/AKfycbyMsMfnvcNWfyd1JpIi94Q4aou-6FL-_0t9adnpxotxXsZ32FyLgWcRz3M4yUBD34JQ/exec",
       method: "POST",
       data: {
         name: name,
+          email:email,
         message: message
       },
       success: function (response) {
         alert("Data saved to Google Sheet!");
         $("#name").val("");
+
+           $("email").val("");
         $("#message").val("");
       },
       error: function (error) {
@@ -843,5 +847,6 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
