@@ -771,10 +771,10 @@ $(document).ready(function () {
       url: "https://script.google.com/macros/library/d/1CvYu-ZdJ5AIu8fOFgYbyxqSwrPUDqCXQIIxoz4eksm9XlET_t4aQYUkw/5",
       method: "POST",
       data: {
-        fullName: fullName, // must match Apps Script
-        email: email,
-        message: message
-      },
+    fullName: $("#name").val(),
+    email: $("#email").val(),
+    message: $("#message").val()
+  },
       success: function (response) {
         alert("Data saved to Google Sheet!");
         $("#name").val("");
@@ -845,6 +845,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
