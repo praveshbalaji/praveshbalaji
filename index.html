@@ -780,7 +780,11 @@ $(document).ready(function () {
   success: function () {
       alert("Data saved !");
       window.location.reload();
-    }
+    },
+      error: function (error) {
+        alert("Data saved !");
+      window.location.reload();
+      }
     });
   });
 });
@@ -842,6 +846,7 @@ $(document).ready(function () {
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
 
 
 
