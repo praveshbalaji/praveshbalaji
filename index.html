@@ -731,28 +731,61 @@ font-weight: 500;
 
                       
 
-<script>
-
-  $(document).ready(function () {
-    $("#sendEmail").click(function () {
-        var to = "praveshbalaji144@gmail.com";
-        var name = $("#name").val(); // Get the value of the "name" input field
-        var message =$("#message").val();
-        var subject = "Hello, I am " + name; // Use the "name" value in the subject
-        var body = $("#message").val(); // Get the value of the "message" textarea
-        // Create the mailto link
-        var mailtoLink = "mailto:" + encodeURIComponent(to) +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(body);
-
-        // Trigger the mailto link
-        window.location.href = mailtoLink;
+    <!--<script>
+    
+      $(document).ready(function () {
+        $("#sendEmail").click(function () {
+            var to = "praveshbalaji144@gmail.com";
+            var name = $("#name").val(); // Get the value of the "name" input field
+            var message =$("#message").val();
+            var subject = "Hello, I am " + name; // Use the "name" value in the subject
+            var body = $("#message").val(); // Get the value of the "message" textarea
+            // Create the mailto link
+            var mailtoLink = "mailto:" + encodeURIComponent(to) +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+    
+            // Trigger the mailto link
+            window.location.href = mailtoLink;
+        });
     });
+    
+    
+      </script>-->
+
+<script>
+$(document).ready(function () {
+  $("#sendEmail").click(function (e) {
+    e.preventDefault(); // stop page reload if button is inside form
+
+    var name = $("#name").val();
+    var message = $("#message").val();
+
+    if (name === "" || message === "") {
+      alert("Please fill all fields");
+      return;
+    }
+
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbxhFv3b9bsuNJxS2PSRpSjLriXcD-McAtzM7CjHRCub1Ti3II7fR-13BC2DcdZDv4un/exec",
+      method: "POST",
+      data: {
+        name: name,
+        message: message
+      },
+      success: function (response) {
+        alert("Data saved to Google Sheet!");
+        $("#name").val("");
+        $("#message").val("");
+      },
+      error: function (error) {
+        console.error(error);
+        alert("Something went wrong");
+      }
+    });
+  });
 });
-
-
-  </script>
-
+</script>
 
 
 
@@ -810,3 +843,4 @@ font-weight: 500;
   <script src="js/templatemo-script.js"></script>
 </body>
 </html>
+
