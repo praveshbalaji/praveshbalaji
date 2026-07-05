@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Balaji Manokaran — Software Engineer",
-  description:
-    "Balaji Manokaran — Full-stack Software Engineer specializing in .NET, React, Next.js, AWS and AI-accelerated development.",
+  title: "Balaji Manokaran — Full-stack engineer. AI-accelerated shipper.",
+  description: "Balaji Manokaran — AI-native full-stack engineer on .NET, React, Next.js and AWS. 4+ years shipping production systems, now 3–5x faster with Cursor and Claude as co-pilots — turning prompts into deployable code. Obsessed with agentic workflows and compressing idea-to-production to hours.",
 };
 
 export default function RootLayout({

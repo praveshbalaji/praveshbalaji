@@ -38,19 +38,20 @@ export function About() {
             <p className="mb-4 font-mono text-[0.78rem] uppercase text-[#4FD1C5]">
               // About
             </p>
-            <p className="max-w-[70ch] text-[1.08rem] text-[#C3CFDE]">
-              I&apos;m a software engineer based in Chennai, currently between engagements
-              after Axentra Corp&apos;s restructuring wound down its client-services model.
-              Over the last four years I&apos;ve moved across healthcare, fintech and
-              workforce-management platforms — usually landing wherever a product needs
-              someone comfortable on both sides of the stack. I set up the Kyber
-              Marketplace frontend monorepo from a blank repo, led the .NET MAUI rebuild of
-              an employee-productivity platform now used by 1,000+ people daily, and built
-              an OCR-driven KYC pipeline for a fintech client. Lately that means pairing
-              production .NET/React work with Cursor and Claude to move faster without
-              cutting corners — and I&apos;m looking for the next team that wants that
-              combination.
-            </p>
+           <p className="max-w-[70ch] text-[1.08rem] text-[#C3CFDE]">
+            I&apos;m a software engineer based in Chennai with over four years of
+            experience building enterprise applications across healthcare, fintech,
+            workforce management, and marketplace platforms. I&apos;ve architected the
+            Kyber Marketplace frontend from a blank monorepo, led the .NET MAUI rebuild
+            of an employee-productivity platform used by 1,000+ daily users, and
+            developed OCR-driven KYC solutions for fintech. Alongside product
+            development, I build internal engineering automation tools that streamline
+            repetitive workflows, automate validation and quality checks, and reduce
+            delivery time. Lately, that means combining production .NET and React
+            development with MCP-powered workflows, Cursor, and Codex to accelerate
+            Figma-to-code implementation, Jira-driven development, and engineering
+            productivity&mdash;without compromising code quality.
+          </p>
           </div>
         </div>
       </section>

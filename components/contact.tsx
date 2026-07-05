@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal";
 const LINKS = [
   { label: "EMAIL", value: "praveshbalaji144@gmail.com", href: "mailto:praveshbalaji144@gmail.com" },
   { label: "PHONE", value: "+91 63792 98916", href: "tel:+916379298916" },
-  { label: "LINKEDIN", value: "/in/praveshbalaji ↗", href: "https://www.linkedin.com/in/praveshbalaji" },
+  { label: "LINKEDIN", value: "/in/praveshbalaji ↗", href: "https://www.linkedin.com/in/balaji-manokaran-686353222/" },
   { label: "GITHUB", value: "/praveshbalaji ↗", href: "https://github.com/praveshbalaji" },
 ];
 
