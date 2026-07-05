@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -35,6 +35,9 @@ jobs:
         env:
           # Change to "" if this repo is ever renamed to praveshbalaji.github.io (a root user page)
           BASE_PATH: /praveshbalaji
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

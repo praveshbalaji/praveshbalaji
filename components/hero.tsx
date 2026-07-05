@@ -2,6 +2,7 @@
 
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { MascotAvatar } from "@/components/mascot-avatar";
+import { MascotGame } from "@/components/mascot-game";
 
 export function Hero() {
   return (
@@ -94,16 +95,19 @@ export function Hero() {
           ))}
         </svg>
 
-        {/* Mascot hub, lifted above the diagram with real 3D tilt */}
-        <CardContainer containerClassName="relative z-10 py-0">
-          <CardBody>
-            <CardItem translateZ={40}>
-              <div className="flex h-[124px] w-[124px] items-center justify-center rounded-2xl border border-[#4FD1C5]/70 bg-[#14273D] shadow-[0_0_30px_rgba(79,209,197,0.25)]">
-                <MascotAvatar size={90} />
-              </div>
-            </CardItem>
-          </CardBody>
-        </CardContainer>
+        <div className="relative z-10 flex flex-col items-center">
+          {/* Mascot hub, lifted above the diagram with real 3D tilt */}
+          <CardContainer containerClassName="py-0">
+            <CardBody>
+              <CardItem translateZ={40}>
+                <div className="flex h-[124px] w-[124px] items-center justify-center rounded-2xl border border-[#4FD1C5]/70 bg-[#14273D] shadow-[0_0_30px_rgba(79,209,197,0.25)]">
+                  <MascotAvatar size={90} />
+                </div>
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+          <MascotGame />
+        </div>
       </div>
     </section>
   );
